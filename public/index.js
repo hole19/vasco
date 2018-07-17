@@ -53,9 +53,9 @@ function addPlacemark(map, location) {
   });
 }
 
-function initMap() {
+function initMapWith(lat, lng) {
   var map = new google.maps.Map(document.getElementById('map'), {
-    center: { lat: -34.3568425, lng: 18.4739882 },
+    center: { lat: lat, lng: lng },
     zoom: 18,
     mapTypeId: google.maps.MapTypeId.HYBRID,
     streetViewControl: false

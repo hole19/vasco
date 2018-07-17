@@ -23,7 +23,10 @@ Edit `config.yml` file
 #### Example:
 
 ```
-maps_api_key: <GOOGLE-API-KEY>
+maps:
+  api_key: <GOOGLE-JS-MAPS-API-KEY>
+  lat: 11.380155
+  lng: 75.722381
 destinations:
   android-generic: adb shell am broadcast -a send.mock -e lat :lat -e lon :lng
   android-specific: adb -s <ANDROID-DEVICE-ID> shell am broadcast -a send.mock -e lat :lat -e lon :lng
