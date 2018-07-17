@@ -1,0 +1,43 @@
+# Vasco
+
+Hi! I am [Vasco](https://en.wikipedia.org/wiki/Vasco_da_Gama)\*!
+
+Vasco sends coordinates from a google map on a webpage directly to your terminal.
+
+We at Hole19, use it to interactively navigate the globe using our Android devices and iOS device simulators even when we're seating confortably at our offices.
+
+# Usage
+
+1. `ruby vasco.rb`
+1. open: http://localhost:8000/index.html.erb
+1. click on the map
+1. watch your command getting executed on the terminal
+
+# Config
+
+Edit `config.yml` file
+1. add your google maps api key
+1. add the terminal commands ('destinations') that you would like to execute
+  1. use `:lat` and `:lng` for the coordinate params
+
+#### Example:
+
+```
+maps_api_key: <GOOGLE-API-KEY>
+destinations:
+  android-generic: adb shell am broadcast -a send.mock -e lat :lat -e lon :lng
+  android-specific: adb -s <ANDROID-DEVICE-ID> shell am broadcast -a send.mock -e lat :lat -e lon :lng
+  ios: set-simulator-location -c :lat :lng
+```
+
+Note:
+- for Android devices we're using... @ruigoncalo please explain!
+- for iOS simulators we're using the following CLI: https://github.com/lyft/set-simulator-location
+
+# Install
+
+```
+bundle install
+```
+
+\* *as imagined by [@ruigoncalo](https://github.com/ruigoncalo)*
