@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vasco da Gama</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      #map {
+        height: 100%;
+      }
+
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      #pac-input {
+        margin-top: 10px;
+        width: 30%;
+        height: 25px;
+        text-align: center;
+      }
+
+      #dest-buttons {
+        width: 100%;
+        margin-top: 5px;
+        height: 25px;
+        text-align: center;
+      }
+
+      .button-clicked {
+        background-color: gray;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="dest-buttons">
+      <span>Send locations to: </span>
+      <% @@config['destinations'].keys.each do |name| %>
+        <button id="button-<%= name %>" onclick="select_dest('<%= name %>')"><%= name %></button>
+      <% end %>
+    </div>
+    <input id="pac-input" class="controls" type="text" placeholder="Find a location">
+    <div id="map"></div>
+    <script src="index.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=<%= @@config['maps_api_key'] %>&callback=initMap&libraries=places"
+    async defer></script>
+    <script type="text/javascript">
+      window.onload = function() { select_dest('<%= @@config['destinations'].keys.first %>'); }
+    </script>
+  </body>
+</html>

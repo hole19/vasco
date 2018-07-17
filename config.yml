@@ -1,0 +1,4 @@
+maps_api_key: <GOOGLE-JS-MAPS-API-KEY>
+destinations:
+  android: adb -s <ANDROID-DEVICE-ID> shell am broadcast -a send.mock -e lat :lat -e lon :lng
+  ios: set-simulator-location -c :lat :lng
