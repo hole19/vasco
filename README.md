@@ -34,7 +34,7 @@ destinations:
 ```
 
 Note:
-- for Android devices we're using... @ruigoncalo please explain!
+- for Android devices: [vasco-android](https://github.com/hole19/vasco/tree/master/vasco-android)
 - for iOS simulators we're using the following CLI: https://github.com/lyft/set-simulator-location
 
 # Install
