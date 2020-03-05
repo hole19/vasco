@@ -37,7 +37,7 @@
   <body>
     <div id="dest-buttons">
       <span>Send locations to: </span>
-      <% @@config['destinations'].keys.each do |name| %>
+      <% CONFIG['destinations'].keys.each do |name| %>
         <button id="button-<%= name %>" onclick="select_dest('<%= name %>')"><%= name %></button>
       <% end %>
     </div>
@@ -45,12 +45,12 @@
     <div id="map"></div>
     <script src="index.js"></script>
     <script type="text/javascript">
-      window.onload = function() { select_dest('<%= @@config['destinations'].keys.first %>'); }
+      window.onload = function() { select_dest('<%= CONFIG['destinations'].keys.first %>'); }
       function initMap() {
-        initMapWith(<%= @@config['maps']['lat'].to_f %>, <%= @@config['maps']['lng'] %>)
+        initMapWith(<%= CONFIG['maps']['lat'].to_f %>, <%= CONFIG['maps']['lng'] %>)
       }
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=<%= @@config['maps']['api_key'] %>&callback=initMap&libraries=places"
+    <script src="https://maps.googleapis.com/maps/api/js?key=<%= CONFIG['maps']['api_key'] %>&callback=initMap&libraries=places"
     async defer></script>
   </body>
 </html>
