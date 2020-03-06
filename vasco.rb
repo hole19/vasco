@@ -44,9 +44,9 @@ end
 
 ######### RUN #########
 
-@@config = YAML.load(open_file("config.yml", "r", true))
+CONFIG = YAML.load(open_file("config.yml", "r", true))
 
-puts @@config
+puts CONFIG
 
 launch_server do |server|
   server.mount_proc '/location' do |req, res|
@@ -57,7 +57,7 @@ launch_server do |server|
       exit
     end
 
-    if dest_cmd = @@config['destinations'][req.query['destination']]
+    if dest_cmd = CONFIG['destinations'][req.query['destination']]
       cmd = Terrapin::CommandLine.new('', dest_cmd)
       params = { lat: req.query['lat'].to_f, lng: req.query['lng'].to_f }
       puts "> #{res.body = cmd.command(params)}"

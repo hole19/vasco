@@ -1,0 +1,10 @@
+version: '3'
+services:
+  vasco:
+    build:
+      context: .
+    image: vasco:0.0.1
+    ports:
+      - '8000:8000'
+    volumes:
+      - .:/usr/src/app:cached
