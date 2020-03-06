@@ -38,6 +38,4 @@ class CustomLocationProvider(private val name: String,
         val locationManager = context.getSystemService(Context.LOCATION_SERVICE) as LocationManager
         locationManager.removeTestProvider(name)
     }
-
-
 }
