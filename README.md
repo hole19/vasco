@@ -8,7 +8,19 @@ We at Hole19, use it to interactively navigate the globe using our Android devic
 
 # Usage
 
-1. `ruby vasco.rb`
+## Run
+
+### With Docker (preferred)
+`docker-compose run --rm --service-ports app`
+
+### Without Docker
+```
+gem install bundler
+bundle
+ruby vasco.rb
+```
+
+## Access
 1. open: http://localhost:8000/index.html.erb
 1. click on the map
 1. watch your command getting executed on the terminal
