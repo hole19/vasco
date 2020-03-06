@@ -1,4 +1,4 @@
-package com.ruigoncalo.vasco
+package com.hole19.vasco
 
 import android.annotation.SuppressLint
 import android.app.AppOpsManager

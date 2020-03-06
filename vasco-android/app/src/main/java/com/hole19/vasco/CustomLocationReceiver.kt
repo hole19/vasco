@@ -1,4 +1,4 @@
-package com.ruigoncalo.vasco
+package com.hole19.vasco
 
 import android.content.BroadcastReceiver
 import android.content.Context
