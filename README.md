@@ -11,7 +11,7 @@ We at Hole19, use it to interactively navigate the globe using our Android devic
 ## Run
 
 ### With Docker (preferred)
-`docker-compose run --rm --service-ports app`
+`docker-compose run --rm --service-ports vasco`
 
 ### Without Docker
 ```
