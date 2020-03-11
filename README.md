@@ -8,7 +8,7 @@ We at Hole19, use it to interactively navigate the globe using our Android devic
 
 # Usage
 
-## Run
+## Install & Run
 
 ### With Docker (preferred)
 `docker-compose run --rm --service-ports vasco`
@@ -49,10 +49,5 @@ Note:
 - for Android devices: [vasco-android](https://github.com/hole19/vasco/tree/master/vasco-android)
 - for iOS simulators we're using the following CLI: https://github.com/lyft/set-simulator-location
 
-# Install
-
-```
-bundle install
-```
 
 \* *as imagined by [@ruigoncalo](https://github.com/ruigoncalo)*
