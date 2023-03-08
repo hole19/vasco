@@ -4,7 +4,7 @@ GEM
     climate_control (0.2.0)
     terrapin (0.6.0)
       climate_control (>= 0.0.3, < 1.0)
-    webrick (1.6.0)
+    webrick (1.6.1)
 
 PLATFORMS
   ruby
